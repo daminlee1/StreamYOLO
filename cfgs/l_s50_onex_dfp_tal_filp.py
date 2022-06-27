@@ -5,6 +5,7 @@ import torch
 import torch.nn as nn
 import torch.distributed as dist
 from yolox.exp import Exp as MyExp
+sys.path.append(os.path.dirname(os.path.abspath(os.path.dirname(__file__))))
 
 
 class Exp(MyExp):
