@@ -57,6 +57,23 @@ The hash strings represent different video sequences in Argoverse, and `ring_fro
 <details>
 <summary>Installation</summary>
 
+### using docker
+
+```shell
+#download docker image from Nvidia NGC
+docker pull nvcr.io/nvidia/pytorch:20.03-py3
+
+#run container
+docker run -it --gpus all -v ${host_streamyolo_path}:/${container_streamyolo_path} --shm-size 32G --name ${container_name} nvcr.io/nvidia/pytorch:20.03-py3 /bin/bash
+
+pip install yolox==0.3
+
+pip install --upgrade torch torchvision
+
+```
+
+### using conda
+
 ```shell
 # basic python libraries
 conda create --name streamyolo python=3.7
